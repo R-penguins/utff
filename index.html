@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>溶液重量计算器</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #343a40;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+    .btn-primary {
+      width: 100%;
+    }
+  </style>
+  <script id="MathJax-script" src="/utff/mathjax/tex-mml-chtml.js"></script>
+  <script type="module" crossorigin src="/utff/assets/index-DMwEs9-k.js"></script>
+  <link rel="stylesheet" crossorigin href="/utff/assets/index-DnVUw_vK.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">溶液重量计算器</h1>
+    <p class="text-center">$$ 相对密度 = \frac{W_1 - f \cdot W_1}{W_2 - f \cdot W_1} $$</p>
+    <form id="calculator-form">
+      <div class="mb-3">
+        <label for="w2_input" class="form-label">水重W2</label>
+        <input type="number" class="form-control" id="w2_input" inputmode="decimal" value="25.9683">
+      </div>
+      <div class="mb-3">
+        <label for="f_input" class="form-label">f</label>
+        <input type="number" class="form-control" id="f_input" inputmode="decimal" value="0.66666667">
+      </div>
+      <div class="mb-3">
+        <label for="relative_density_input" class="form-label">相对密度</label>
+        <input type="number" class="form-control" id="relative_density_input" inputmode="decimal" value="1.296">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calculate()">计算</button>
+    </form>
+    <h2 class="text-center mt-4">溶液重量 W1: <span id="result">0</span></h2>
+  </div>
+</body>
+</html>
